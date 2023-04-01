@@ -100,6 +100,7 @@ func main() {
 	fmt.Printf("Time elapsed: %s\nRequests per Second: %f\n", elapsed, float64(numberOfRequests)/elapsed.Seconds())
 }
 
+// method from "github.com/phuslu/fastdns", MIT licence
 func short(resp *fastdns.Message) {
 	_ = resp.Walk(func(name []byte, typ fastdns.Type, class fastdns.Class, ttl uint32, data []byte) bool {
 		var v interface{}
